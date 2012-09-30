@@ -1,4 +1,5 @@
 ipch/
+Debug/
 *.sdf
 *.opensdf
 *.suo
