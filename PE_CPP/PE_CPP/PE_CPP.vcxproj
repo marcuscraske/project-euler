@@ -80,7 +80,6 @@
     <ClInclude Include="Solution002.h" />
     <ClInclude Include="SolutionIncludes.h" />
     <ClInclude Include="Solutions.h" />
-    <ClInclude Include="targetver.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>

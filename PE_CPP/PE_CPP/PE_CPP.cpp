@@ -48,7 +48,7 @@ int main()
 }
 void handleSolutionExecution(SBase* solution)
 {
-	cout << "Executing: " << solution->title() << endl;
+	cout << "Executing: Problem #" << solution->problemNumber() << ": " << solution->title() << endl << "*************************************************************************" << endl;
 	// Begin timer
 	int begin = clock();
 	// Execute solution
