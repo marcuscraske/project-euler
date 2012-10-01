@@ -72,12 +72,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="SBase.h" />
+    <ClInclude Include="SievePrimes.h" />
     <ClInclude Include="Solution001.h" />
     <ClInclude Include="Solution002.h" />
+    <ClInclude Include="Solution003.h" />
     <ClInclude Include="SolutionIncludes.h" />
     <ClInclude Include="Solutions.h" />
     <ClInclude Include="Utils.h" />
@@ -85,8 +84,10 @@
   <ItemGroup>
     <ClCompile Include="PE_CPP.cpp" />
     <ClCompile Include="SBase.cpp" />
+    <ClCompile Include="SievePrimes.cpp" />
     <ClCompile Include="Solution001.cpp" />
     <ClCompile Include="Solution002.cpp" />
+    <ClCompile Include="Solution003.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

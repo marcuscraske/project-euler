@@ -18,11 +18,7 @@ void Solution002::execute()
 	long sum = 2;
 	const int limit = 4000000;
 	double ratio = Utils::pow(GOLDEN_RATIO, 3);
-	while(currTerm < limit)
-	{
-		currTerm = Utils::round(currTerm * ratio);
-		if(currTerm > limit) break;
+	while((currTerm = Utils::round(currTerm * ratio)) < limit)
 		sum += currTerm;
-	}
 	cout << "Answer: " << sum << endl;
 }

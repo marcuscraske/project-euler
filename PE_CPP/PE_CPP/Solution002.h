@@ -1,5 +1,6 @@
 #pragma once
 #include "SolutionIncludes.h"
+
 class Solution002 : public SBase
 {
 public:

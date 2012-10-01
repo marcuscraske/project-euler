@@ -4,18 +4,28 @@
 
 using namespace std;
 
+/*
+	Checks the specified data consists of numeric characters; this does not check the value
+	will parse as a number.
+*/
 bool Utils::isNumeric(char data[])
 {
 	for(int i = 0; i < sizeof(data) - 1; i++) // We ignore the last element because it's the end of sequence char
 		if(!isdigit(data[i])) return false;
 	return true;
 }
+/*
+	Generates a random number between a range.
+*/
 int Utils::rand(int min, int max)
 {
 	if(min >= max) return 0;
 	max -= min; // If our max is 600 and min is 400 and we add min later, we only want to generate a number between 0 to 200 (since +min/+400) will be 600
 	return min + (std::rand() % (max + 1)); // max % max = 0, therefore we do max + 1
 }
+/*
+	Converts a char-array to a number; this assumes the input has been validated.
+*/
 int Utils::atoi(char data[])
 {
 	int number = 0;
@@ -26,6 +36,10 @@ int Utils::atoi(char data[])
 	}
 	return number;
 }
+/*
+	Attempts to parse character data and returns a boolean, indicating if the operation
+	was successful or not.
+*/
 bool Utils::tryParse(char data[], int* output)
 {
 	if(sizeof(data) < 2) return false; // No data
@@ -40,6 +54,9 @@ bool Utils::tryParse(char data[], int* output)
 	*output = number;
 	return data[i] == '\0';
 }
+/*
+	Calculates the exponential of a number.
+*/
 long Utils::pow(long number, long exponent)
 {
 	if(exponent == 0)
@@ -52,22 +69,9 @@ long Utils::pow(long number, long exponent)
 		return halfExp * halfExp;
 	return number * halfExp * halfExp;
 }
-double Utils::pow(double number, double exponent)
-{
-	return powf(number, exponent);
-}
-double Utils::floor(double number)
-{
-	return floorf(number);
-}
-double Utils::ceil(double number)
-{
-	return ceilf(number);
-}
-double Utils::mod(double number, double multiple)
-{
-	return number * (number - floor(number / multiple));
-}
+/*
+	Rounds a double up or down, removing the mantissa.
+*/
 double Utils::round(double number)
 {
 	double nFloor;
@@ -77,6 +81,11 @@ double Utils::round(double number)
 	else
 		return nFloor;
 }
+/*
+	Gets the summation of an arithmetic sequence between two ranges. The numberLast
+	parameter does not need to be a multiple in the sequence; instead the closest
+	multiple before it will be used.
+*/
 long Utils::getArithmeticSummation(long numberFirst, long numberLast, long n)
 {
 	long elementLast = numberLast - (((numberLast - numberFirst) + n) % n);
@@ -92,6 +101,14 @@ long Utils::getArithmeticSummation(long numberFirst, long numberLast, long n)
 			* n
 		);
 }
+/*
+	Gets the summation of a geometric series.
+
+	Parameters:
+	First number		- the first number in the sequence.
+	Common ratio		- term 2 / term 1 = common ratio i.e. 3 6 12 24, 6 / 3 = 2
+	Number of elements	- the number of elements in the sequence to sum.
+*/
 long Utils::getGeometricSummation(long firstNumber, long commonRatio, long numberOfElements)
 {
 	return firstNumber * (

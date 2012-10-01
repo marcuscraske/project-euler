@@ -15,6 +15,7 @@
 using namespace std;
 
 SBase*		getSolution(int problemNum);
+void		getListOfSolutions();
 void		handleSolutionExecution(SBase* solution);
 
 int main()
@@ -25,10 +26,12 @@ int main()
 	SBase* solution;
 	while(true)
 	{
-		cout << "Enter a solution number, '?' for a list of solutions or 'q' to exit:" << endl;
+		cout << "Enter a problem number, '?' for a list of solutions or 'q' to exit:" << endl;
 		cin >> input;
 		if(input[0] == 'q')
 			break;
+		else if(input[0] == '?')
+			getListOfSolutions();
 		else if((solutionNumber = Utils::atoi(input)) != 0)
 		{
 			// Fetch the solution object
@@ -45,6 +48,17 @@ int main()
 			cout << "Invalid menu selection, try again." << endl << endl;
 	}
 	return 0;
+}
+void getListOfSolutions()
+{
+	SBase* solution = 0;
+
+	int i = 1;
+	while((solution = getSolution(i)) != 0 && (i++) < INT_MAX)
+	{
+		cout << "Problem #" << solution->problemNumber() << "\n" << solution->title() << "\n\n";
+		delete solution;
+	}
 }
 void handleSolutionExecution(SBase* solution)
 {
@@ -65,6 +79,8 @@ SBase* getSolution(int problemNum)
 			return new Solution001();
 		case 2:
 			return new Solution002();
+		case 3:
+			return new Solution003();
 		default:
 			return 0;
 	}

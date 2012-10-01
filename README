@@ -4,10 +4,13 @@ This is not an official UberMeat project.
 Problems completed:
 - 1: Sum of natural numbers divisible by 3 and 5.
 - 2: Sum of even Fibonacci terms between one to four-million.
+- 3: Find the largest prime factor of 600851475143.
 
 
 This project has no license and may be used for any purpose at all; for more information about Project Euler, visit:
 http://www.projecteuler.net
+
+If you require a license, use WTFPL (Do What The Fuck You Want To Public License).
 
 You can also add me as a friend to view my progress:
 74797849278763_6471c62a592921cb78bbc7baad665782

@@ -2,7 +2,17 @@
 #include <string>
 using namespace std;
 
+/*
+	The Golden Ratio number (constant), also known as Phidias or Phi; more information:
+	http://en.wikipedia.org/wiki/Golden_ratio
+*/
 #define GOLDEN_RATIO 1.6180339887
+
+/*
+	Pi number (constant); more information:
+	http://en.wikipedia.org/wiki/Pi
+*/
+#define PI 3.14159265359
 
 class Utils
 {
@@ -12,12 +22,7 @@ public:
 	static int Utils::atoi(char data[]);
 	static bool Utils::tryParse(char data[], int* output);
 	static long Utils::pow(long number, long exponent);
-	static double Utils::pow(double number, double exponent);
-	static double Utils::floor(double number);
-	static double Utils::ceil(double number);
 	static double Utils::round(double number);
-	static double Utils::mod(double number, double multiple);
 	static long Utils::getArithmeticSummation(long numberFirst, long numberLast, long n);
 	static long Utils::getGeometricSummation(long firstNumber, long commonRatio, long numberOfElements);
 };
-
