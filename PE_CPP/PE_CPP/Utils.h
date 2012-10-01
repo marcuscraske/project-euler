@@ -25,4 +25,5 @@ public:
 	static double Utils::round(double number);
 	static long Utils::getArithmeticSummation(long numberFirst, long numberLast, long n);
 	static long Utils::getGeometricSummation(long firstNumber, long commonRatio, long numberOfElements);
+	static bool Utils::numberIsPalindrome(int value);
 };

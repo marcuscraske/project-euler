@@ -62,7 +62,7 @@ void getListOfSolutions()
 }
 void handleSolutionExecution(SBase* solution)
 {
-	cout << "Executing: Problem #" << solution->problemNumber() << ": " << solution->title() << endl << "*************************************************************************" << endl;
+	cout << "Executing: Problem #" << solution->problemNumber() << endl << solution->title() << endl << "*************************************************************************" << endl;
 	// Begin timer
 	int begin = clock();
 	// Execute solution
@@ -81,6 +81,8 @@ SBase* getSolution(int problemNum)
 			return new Solution002();
 		case 3:
 			return new Solution003();
+		case 4:
+			return new Solution004();
 		default:
 			return 0;
 	}

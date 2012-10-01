@@ -117,3 +117,17 @@ long Utils::getGeometricSummation(long firstNumber, long commonRatio, long numbe
 		(1 - commonRatio)
 		);
 }
+/*
+	Checks a numer is a palindrome; a palindrome is a number
+	that reads the same when reversed.
+*/
+bool Utils::numberIsPalindrome(int value)
+{
+	int r = 0, o = value; // r = reversed, o = original
+	while(value > 0)
+	{
+		r = r*10 + (value % 10); // Fetch the right most char
+		value = value / 10; // Int should always round down
+	}
+	return r == o;
+}
