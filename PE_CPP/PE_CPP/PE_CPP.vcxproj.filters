@@ -54,6 +54,9 @@
     <ClInclude Include="Solution004.h">
       <Filter>Header Files\Solutions</Filter>
     </ClInclude>
+    <ClInclude Include="Solution005.h">
+      <Filter>Header Files\Solutions</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PE_CPP.cpp">
@@ -78,6 +81,9 @@
       <Filter>Source Files\Solutions</Filter>
     </ClCompile>
     <ClCompile Include="Solution004.cpp">
+      <Filter>Source Files\Solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution005.cpp">
       <Filter>Source Files\Solutions</Filter>
     </ClCompile>
   </ItemGroup>

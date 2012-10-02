@@ -1,6 +1,6 @@
 #pragma once
 #include "Solution003.h"
-#include "SievePrimes.h"
+#include "SolutionIncludes.h"
 
 int Solution003::problemNumber()
 {
@@ -12,7 +12,6 @@ string Solution003::title()
 }
 void Solution003::execute()
 {
-	const long long test = 0x43924903249324;
 	const long long number = 600851475143;
 	long maxRangeOfFactors = sqrt(number / 2.0);
 	SievePrimes sp(maxRangeOfFactors, false); // We only need number / 2 of primes, since x * 2 will be largest factor possible

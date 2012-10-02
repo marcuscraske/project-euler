@@ -78,6 +78,7 @@
     <ClInclude Include="Solution002.h" />
     <ClInclude Include="Solution003.h" />
     <ClInclude Include="Solution004.h" />
+    <ClInclude Include="Solution005.h" />
     <ClInclude Include="SolutionIncludes.h" />
     <ClInclude Include="Solutions.h" />
     <ClInclude Include="Utils.h" />
@@ -90,6 +91,7 @@
     <ClCompile Include="Solution002.cpp" />
     <ClCompile Include="Solution003.cpp" />
     <ClCompile Include="Solution004.cpp" />
+    <ClCompile Include="Solution005.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

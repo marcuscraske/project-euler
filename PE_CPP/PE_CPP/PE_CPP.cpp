@@ -17,6 +17,7 @@ using namespace std;
 SBase*		getSolution(int problemNum);
 void		getListOfSolutions();
 void		handleSolutionExecution(SBase* solution);
+void		executeAllSolutions();
 
 int main()
 {
@@ -26,12 +27,14 @@ int main()
 	SBase* solution;
 	while(true)
 	{
-		cout << "Enter a problem number, '?' for a list of solutions or 'q' to exit:" << endl;
+		cout << "Enter a problem number, '?' for a list of solutions, 'e' to execute every solution or 'q' to exit:" << endl;
 		cin >> input;
 		if(input[0] == 'q')
 			break;
 		else if(input[0] == '?')
 			getListOfSolutions();
+		else if(input[0] == 'e')
+			executeAllSolutions();
 		else if((solutionNumber = Utils::atoi(input)) != 0)
 		{
 			// Fetch the solution object
@@ -52,7 +55,6 @@ int main()
 void getListOfSolutions()
 {
 	SBase* solution = 0;
-
 	int i = 1;
 	while((solution = getSolution(i)) != 0 && (i++) < INT_MAX)
 	{
@@ -69,7 +71,7 @@ void handleSolutionExecution(SBase* solution)
 	solution->execute();
 	// End timer
 	int end = clock();
-	cout << "Executed in " << (end - begin) << " ticks / " << ((double)(end - begin) / CLOCKS_PER_SEC) << " m/s." << endl << endl;
+	cout << "Executed in " << (end - begin) << " ticks / " << ((double)(end - begin) / CLOCKS_PER_SEC) << " secs." << endl << endl;
 }
 SBase* getSolution(int problemNum)
 {
@@ -83,7 +85,23 @@ SBase* getSolution(int problemNum)
 			return new Solution003();
 		case 4:
 			return new Solution004();
+		case 5:
+			return new Solution005();
 		default:
 			return 0;
 	}
+}
+void executeAllSolutions()
+{
+	SBase* solution = 0;
+	int i = 1;
+	int start = clock();
+	while((solution = getSolution(i)) != 0 && (i++) < INT_MAX)
+	{
+		cout << "Problem #" << solution->problemNumber() << "\n" << solution->title() << "\n\n";
+		solution->execute();
+		delete solution;
+	}
+	int end = clock();
+	cout << "Total of " << --i << " problems executed in " << (end - start) << " ticks (" << ((end - start) / (double)CLOCKS_PER_SEC) << " secs)" << endl << endl;
 }
