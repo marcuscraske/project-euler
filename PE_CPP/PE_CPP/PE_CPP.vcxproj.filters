@@ -54,7 +54,7 @@
     <ClInclude Include="Solution004.h">
       <Filter>Header Files\Solutions</Filter>
     </ClInclude>
-    <ClInclude Include="Solution005.h">
+    <ClInclude Include="Solution022.h">
       <Filter>Header Files\Solutions</Filter>
     </ClInclude>
   </ItemGroup>
@@ -83,7 +83,7 @@
     <ClCompile Include="Solution004.cpp">
       <Filter>Source Files\Solutions</Filter>
     </ClCompile>
-    <ClCompile Include="Solution005.cpp">
+    <ClCompile Include="Solution022.cpp">
       <Filter>Source Files\Solutions</Filter>
     </ClCompile>
   </ItemGroup>

@@ -5,4 +5,4 @@
 #include "SBase.h"
 #include "SievePrimes.h"
 
-using namespace std;
+using std::cout;

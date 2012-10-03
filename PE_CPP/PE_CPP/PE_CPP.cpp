@@ -18,6 +18,7 @@ SBase*		getSolution(int problemNum);
 void		getListOfSolutions();
 void		handleSolutionExecution(SBase* solution);
 void		executeAllSolutions();
+void		primesTest();
 
 int main()
 {
@@ -27,7 +28,7 @@ int main()
 	SBase* solution;
 	while(true)
 	{
-		cout << "Enter a problem number, '?' for a list of solutions, 'e' to execute every solution or 'q' to exit:" << endl;
+		cout << "Enter a problem number, '?' for a list of solutions, 'e' to execute every solution, 'p' for a primes test or 'q' to exit:" << endl;
 		cin >> input;
 		if(input[0] == 'q')
 			break;
@@ -35,6 +36,8 @@ int main()
 			getListOfSolutions();
 		else if(input[0] == 'e')
 			executeAllSolutions();
+		else if(input[0] == 'p')
+			primesTest();
 		else if((solutionNumber = Utils::atoi(input)) != 0)
 		{
 			// Fetch the solution object
@@ -85,8 +88,8 @@ SBase* getSolution(int problemNum)
 			return new Solution003();
 		case 4:
 			return new Solution004();
-		case 5:
-			return new Solution005();
+		case 22:
+			return new Solution022();
 		default:
 			return 0;
 	}
@@ -104,4 +107,18 @@ void executeAllSolutions()
 	}
 	int end = clock();
 	cout << "Total of " << --i << " problems executed in " << (end - start) << " ticks (" << ((end - start) / (double)CLOCKS_PER_SEC) << " secs)" << endl << endl;
+}
+void primesTest()
+{
+	int upperBound = 60000000;
+	cout << "Finding primes within range of 1 to " << upperBound << "..." << endl;;
+	int start = clock();
+	SievePrimes sp(upperBound, true);
+	int end = clock();
+	cout << "Finished in " << (end - start) << " ticks (" << ((double)(end - start) / CLOCKS_PER_SEC) << " secs)!" << endl << endl;
+	cout << "Safety test (range 1 to 120):" << endl;
+	for(int i = 1; i <= 120; i++)
+		if(sp.isPrime(i))
+			cout << i << "\t";
+	cout << endl << endl;
 }

@@ -57,15 +57,18 @@ void SievePrimes::loadPrimes(void)
 				setIndex(j, false);
 	}
 }
+const int indexCache[8] = { 1, 2, 4, 8, 16, 32, 64, 128};
 bool SievePrimes::isPrime(long index)
 {
+	if(index != 2 && index % 2 == 0)
+		return false;
+	else if(index != 3 && index % 3 == 0)
+		return false;
+	else if(index != 5 && index % 5 == 0)
+		return false;
 	long chunkIndex = floor(index / 8.0);
-	unsigned char chunk = chunks[chunkIndex];
-	// Shift the chunk to the left and right to eliminate the bits we dont want
-	long column = index % 8;
-	chunk >>= column;
-	chunk <<= 7;
-	return chunk == 0;
+	// Get the bit at the specified column and bitwise AND the flipped chunk; if a one exists at the column, the expression will return true (hence prime)
+	return ~chunks[chunkIndex] & indexCache[index % 8];
 }
 void SievePrimes::setIndex(long index, bool value)
 {
@@ -74,12 +77,8 @@ void SievePrimes::setIndex(long index, bool value)
 	// If we are setting a prime i.e. a bit to zero, we will flip each bit (we wil re-flip it later)
 	if(value)
 		chunk = (~chunk);
-	// Now we will generate a char with the bit set to 1 in the column of the index being set
-	unsigned char p = 0x1;
-	// -- Shift the bit to the left by  8 - col offset in byte
-	p <<= (index % 8);
-	// This bitwise OR will cause the bit at the specified col to become 1 in chunk
-	chunk |= p;
+	// Now we will grab the pre-cached value with 1 at the specified column, OR it and cause the chunk to have the bit at the column set to one
+	chunk |= indexCache[index % 8];
 	// Flip the char back if we flipped it earlier
 	if(value)
 		chunk = (~chunk);
