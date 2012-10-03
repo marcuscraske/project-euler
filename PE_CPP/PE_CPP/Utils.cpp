@@ -109,12 +109,12 @@ long Utils::getArithmeticSummation(long numberFirst, long numberLast, long n)
 	Common ratio		- term 2 / term 1 = common ratio i.e. 3 6 12 24, 6 / 3 = 2
 	Number of elements	- the number of elements in the sequence to sum.
 */
-long Utils::getGeometricSummation(long firstNumber, long commonRatio, long numberOfElements)
+double Utils::getGeometricSummation(double firstNumber, double commonRatio, double numberOfElements)
 {
 	return firstNumber * (
-		(1 - pow(commonRatio, numberOfElements))
+		(1.0 - pow(commonRatio, numberOfElements))
 		/
-		(1 - commonRatio)
+		(1.0 - commonRatio)
 		);
 }
 /*

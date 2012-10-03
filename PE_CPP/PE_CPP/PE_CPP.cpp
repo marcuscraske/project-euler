@@ -110,7 +110,7 @@ void executeAllSolutions()
 }
 void primesTest()
 {
-	int upperBound = 60000000;
+	int upperBound = 30000000;
 	cout << "Finding primes within range of 1 to " << upperBound << "..." << endl;;
 	int start = clock();
 	SievePrimes sp(upperBound, true);

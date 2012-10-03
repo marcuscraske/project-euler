@@ -4,10 +4,11 @@
 #include "SievePrimes.h"
 using namespace std;
 
-vector<unsigned char> chunks;
+unsigned char *chunks;
 long rangeEnd;
+long numChunks;
 
-#define SIEVE_RANGE_START 2
+#define SIEVE_RANGE_START 3
 
 /*
 	This class is used to create a cache of prime numbers from 0 to n;
@@ -30,31 +31,37 @@ long rangeEnd;
 
 	The number of chunks is:
 	ceiling(rangeEnd / 8) + 1
+
+	Edit:
+	This no longer stores even numbers.
 */
 
 SievePrimes::SievePrimes(long _rangeEnd, bool preloadPrimes)
 {
 	rangeEnd = _rangeEnd;
-	int numChunks = ceil(rangeEnd / 8.0) + 1; // We add one because of index zero
-	// Begin adding each chunk/byte of booleans
-	unsigned char c = 0;
+	numChunks = ceil((double)rangeEnd / 16.0) + 1; // We add one because of index zero
+	chunks = new unsigned char[numChunks];
+	// Initialize each element to zero
 	for(int i = 0; i < numChunks; i++)
-		chunks.push_back(c);
+		chunks[i] = 0;
+	// Check if to load the primes
 	if(preloadPrimes)
 		loadPrimes();
 }
 SievePrimes::~SievePrimes(void)
 {
-	chunks.clear();
+	delete[] chunks;
 }
 void SievePrimes::loadPrimes(void)
 {
+	long limit = sqrt((double)rangeEnd);
 	// Go from 2 to rangeEnd, setting each multiple of i to true/prime - but only if the index of i has not been set
-	for(long i = SIEVE_RANGE_START; i <= rangeEnd; i+= 1)
+	for(long i = SIEVE_RANGE_START; i <= limit; i++)
 	{
 		if(isPrime(i))
 			for(long j = i + i; j <= rangeEnd; j += i)
-				setIndex(j, false);
+				if(j % 2 != 0)
+					setIndex(j, false);
 	}
 }
 const int indexCache[8] = { 1, 2, 4, 8, 16, 32, 64, 128};
@@ -66,19 +73,22 @@ bool SievePrimes::isPrime(long index)
 		return false;
 	else if(index != 5 && index % 5 == 0)
 		return false;
-	long chunkIndex = floor(index / 8.0);
+	long relIndex = (index + 1) / 2;
+	long chunkIndex = floor(relIndex / 8.0);
 	// Get the bit at the specified column and bitwise AND the flipped chunk; if a one exists at the column, the expression will return true (hence prime)
-	return ~chunks[chunkIndex] & indexCache[index % 8];
+	return ~chunks[chunkIndex] & indexCache[relIndex % 8];
 }
 void SievePrimes::setIndex(long index, bool value)
 {
-	long chunkIndex = floor(index / 8.0);
+	//cout << index << "," << ((index / 2) + 1) << endl;
+	long relIndex = (index + 1) / 2;
+	long chunkIndex = floor(relIndex / 8.0);
 	unsigned char chunk = chunks[chunkIndex];
 	// If we are setting a prime i.e. a bit to zero, we will flip each bit (we wil re-flip it later)
 	if(value)
 		chunk = (~chunk);
 	// Now we will grab the pre-cached value with 1 at the specified column, OR it and cause the chunk to have the bit at the column set to one
-	chunk |= indexCache[index % 8];
+	chunk |= indexCache[relIndex % 8];
 	// Flip the char back if we flipped it earlier
 	if(value)
 		chunk = (~chunk);
