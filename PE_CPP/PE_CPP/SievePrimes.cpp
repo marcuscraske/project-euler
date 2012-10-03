@@ -42,7 +42,7 @@ SievePrimes::SievePrimes(long _rangeEnd, bool preloadPrimes)
 	numChunks = ceil((double)rangeEnd / 16.0) + 1; // We add one because of index zero
 	chunks = new unsigned char[numChunks];
 	// Initialize each element to zero
-	for(int i = 0; i < numChunks; i++)
+	for(long i = 0; i < numChunks; i++)
 		chunks[i] = 0;
 	// Check if to load the primes
 	if(preloadPrimes)
@@ -54,9 +54,9 @@ SievePrimes::~SievePrimes(void)
 }
 void SievePrimes::loadPrimes(void)
 {
-	long limit = sqrt((double)rangeEnd);
+	//long limit = sqrt((double)rangeEnd);
 	// Go from 2 to rangeEnd, setting each multiple of i to true/prime - but only if the index of i has not been set
-	for(long i = SIEVE_RANGE_START; i <= limit; i++)
+	for(long i = SIEVE_RANGE_START; i <= rangeEnd; i++)
 	{
 		if(isPrime(i))
 			for(long j = i + i; j <= rangeEnd; j += i)
