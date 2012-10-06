@@ -76,11 +76,12 @@ bool SievePrimes::isPrime(long index)
 	long relIndex = (index + 1) / 2;
 	long chunkIndex = floor(relIndex / 8.0);
 	// Get the bit at the specified column and bitwise AND the flipped chunk; if a one exists at the column, the expression will return true (hence prime)
+	if(chunkIndex >= numChunks)
+		cout << "Overflow at chunk-index " << chunkIndex << ", index: " << index << endl;
 	return ~chunks[chunkIndex] & indexCache[relIndex % 8];
 }
 void SievePrimes::setIndex(long index, bool value)
 {
-	//cout << index << "," << ((index / 2) + 1) << endl;
 	long relIndex = (index + 1) / 2;
 	long chunkIndex = floor(relIndex / 8.0);
 	unsigned char chunk = chunks[chunkIndex];

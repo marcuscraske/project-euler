@@ -25,6 +25,24 @@
     <Filter Include="Source Files\Libs">
       <UniqueIdentifier>{ca49d493-0822-43d2-9d82-56e175729449}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Solutions\Completed - Clean">
+      <UniqueIdentifier>{74da62b4-98bc-4bc7-9836-339c52c62b6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Solutions\Completed - Clean">
+      <UniqueIdentifier>{cfe2f228-bc9b-4353-9b47-fff593fcc93d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Solutions\Completed">
+      <UniqueIdentifier>{3193fc24-f401-40e9-8061-8b18427b1ea1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Solutions\Completed">
+      <UniqueIdentifier>{76bd75cf-8724-45d0-89a7-e0bd67e25da8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Solutions\Incomplete">
+      <UniqueIdentifier>{646ce78f-1eb0-4613-8007-8532430b203d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Solutions\Incomplete">
+      <UniqueIdentifier>{1f675979-de83-46c2-9a60-51fae1ed058c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SBase.h">
@@ -33,14 +51,8 @@
     <ClInclude Include="Solutions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Solution001.h">
-      <Filter>Header Files\Solutions</Filter>
-    </ClInclude>
     <ClInclude Include="SolutionIncludes.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution002.h">
-      <Filter>Header Files\Solutions</Filter>
     </ClInclude>
     <ClInclude Include="Utils.h">
       <Filter>Header Files\Libs</Filter>
@@ -48,14 +60,53 @@
     <ClInclude Include="SievePrimes.h">
       <Filter>Header Files\Libs</Filter>
     </ClInclude>
-    <ClInclude Include="Solution003.h">
-      <Filter>Header Files\Solutions</Filter>
+    <ClInclude Include="Solution001.h">
+      <Filter>Header Files\Solutions\Completed - Clean</Filter>
     </ClInclude>
     <ClInclude Include="Solution004.h">
-      <Filter>Header Files\Solutions</Filter>
+      <Filter>Header Files\Solutions\Completed - Clean</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution002.h">
+      <Filter>Header Files\Solutions\Completed - Clean</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution003.h">
+      <Filter>Header Files\Solutions\Completed - Clean</Filter>
     </ClInclude>
     <ClInclude Include="Solution022.h">
-      <Filter>Header Files\Solutions</Filter>
+      <Filter>Header Files\Solutions\Completed</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution050.h">
+      <Filter>Header Files\Solutions\Completed</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution152.h">
+      <Filter>Header Files\Solutions\Incomplete</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution035.h">
+      <Filter>Header Files\Solutions\Completed</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution028.h">
+      <Filter>Header Files\Solutions\Completed</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution036.h">
+      <Filter>Header Files\Solutions\Completed</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution023.h">
+      <Filter>Header Files\Solutions\Completed</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution049.h">
+      <Filter>Header Files\Solutions\Completed</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution024.h">
+      <Filter>Header Files\Solutions\Incomplete</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution030.h">
+      <Filter>Header Files\Solutions\Completed</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution034.h">
+      <Filter>Header Files\Solutions\Completed</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution039.h">
+      <Filter>Header Files\Solutions\Incomplete</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -65,26 +116,59 @@
     <ClCompile Include="SBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Solution001.cpp">
-      <Filter>Source Files\Solutions</Filter>
-    </ClCompile>
-    <ClCompile Include="Solution002.cpp">
-      <Filter>Source Files\Solutions</Filter>
-    </ClCompile>
     <ClCompile Include="Utils.cpp">
       <Filter>Source Files\Libs</Filter>
     </ClCompile>
     <ClCompile Include="SievePrimes.cpp">
       <Filter>Source Files\Libs</Filter>
     </ClCompile>
-    <ClCompile Include="Solution003.cpp">
-      <Filter>Source Files\Solutions</Filter>
+    <ClCompile Include="Solution001.cpp">
+      <Filter>Source Files\Solutions\Completed - Clean</Filter>
     </ClCompile>
     <ClCompile Include="Solution004.cpp">
-      <Filter>Source Files\Solutions</Filter>
+      <Filter>Source Files\Solutions\Completed - Clean</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution002.cpp">
+      <Filter>Source Files\Solutions\Completed - Clean</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution003.cpp">
+      <Filter>Source Files\Solutions\Completed - Clean</Filter>
     </ClCompile>
     <ClCompile Include="Solution022.cpp">
-      <Filter>Source Files\Solutions</Filter>
+      <Filter>Source Files\Solutions\Completed</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution050.cpp">
+      <Filter>Source Files\Solutions\Completed</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution152.cpp">
+      <Filter>Source Files\Solutions\Incomplete</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution035.cpp">
+      <Filter>Source Files\Solutions\Completed</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution028.cpp">
+      <Filter>Source Files\Solutions\Completed</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution036.cpp">
+      <Filter>Source Files\Solutions\Completed</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution023.cpp">
+      <Filter>Source Files\Solutions\Completed</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution049.cpp">
+      <Filter>Source Files\Solutions\Completed</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution024.cpp">
+      <Filter>Source Files\Solutions\Incomplete</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution030.cpp">
+      <Filter>Source Files\Solutions\Completed</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution034.cpp">
+      <Filter>Source Files\Solutions\Completed</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution039.cpp">
+      <Filter>Source Files\Solutions\Incomplete</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

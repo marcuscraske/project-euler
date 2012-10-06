@@ -7,10 +7,13 @@
 	Add new solutions to Solutions.h and switch-statement in getSolution (within this source-file).
 */
 
+#define EULER_PROBLEMS 397
+
 #include "Solutions.h"
 #include <iostream>
 #include "Utils.h"
 #include <time.h>
+#include "SievePrimes.h"
 
 using namespace std;
 
@@ -90,6 +93,24 @@ SBase* getSolution(int problemNum)
 			return new Solution004();
 		case 22:
 			return new Solution022();
+		case 23:
+			return new Solution023();
+		case 28:
+			return new Solution028();
+		case 30:
+			return new Solution030();
+		case 34:
+			return new Solution034();
+		case 35:
+			return new Solution035();
+		case 36:
+			return new Solution036();
+		case 49:
+			return new Solution049();
+		case 50:
+			return new Solution050();
+		case 152:
+			return new Solution152();
 		default:
 			return 0;
 	}
@@ -99,14 +120,20 @@ void executeAllSolutions()
 	SBase* solution = 0;
 	int i = 1;
 	int start = clock();
-	while((solution = getSolution(i)) != 0 && (i++) < INT_MAX)
+	int solutionsExecuted = 0;
+	while(i++ <= EULER_PROBLEMS)
 	{
-		cout << "Problem #" << solution->problemNumber() << "\n" << solution->title() << "\n\n";
-		solution->execute();
-		delete solution;
+		solution =getSolution(i);
+		if(solution != 0)
+		{
+			cout << "Problem #" << solution->problemNumber() << "\n" << solution->title() << "\n\n";
+			solution->execute();
+			delete solution;
+			solutionsExecuted++;
+		}
 	}
 	int end = clock();
-	cout << "Total of " << --i << " problems executed in " << (end - start) << " ticks (" << ((end - start) / (double)CLOCKS_PER_SEC) << " secs)" << endl << endl;
+	cout << "Total of " << solutionsExecuted << " problems executed in " << (end - start) << " ticks (" << ((end - start) / (double)CLOCKS_PER_SEC) << " secs)" << endl << endl;
 }
 void primesTest()
 {

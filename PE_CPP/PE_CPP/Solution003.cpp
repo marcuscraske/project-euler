@@ -1,6 +1,7 @@
 #pragma once
 #include "Solution003.h"
 #include "SolutionIncludes.h"
+#include "SievePrimes.h"
 
 int Solution003::problemNumber()
 {

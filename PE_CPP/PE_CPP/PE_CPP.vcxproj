@@ -79,6 +79,17 @@
     <ClInclude Include="Solution003.h" />
     <ClInclude Include="Solution004.h" />
     <ClInclude Include="Solution022.h" />
+    <ClInclude Include="Solution023.h" />
+    <ClInclude Include="Solution024.h" />
+    <ClInclude Include="Solution028.h" />
+    <ClInclude Include="Solution030.h" />
+    <ClInclude Include="Solution034.h" />
+    <ClInclude Include="Solution035.h" />
+    <ClInclude Include="Solution036.h" />
+    <ClInclude Include="Solution039.h" />
+    <ClInclude Include="Solution049.h" />
+    <ClInclude Include="Solution050.h" />
+    <ClInclude Include="Solution152.h" />
     <ClInclude Include="SolutionIncludes.h" />
     <ClInclude Include="Solutions.h" />
     <ClInclude Include="Utils.h" />
@@ -92,6 +103,17 @@
     <ClCompile Include="Solution003.cpp" />
     <ClCompile Include="Solution004.cpp" />
     <ClCompile Include="Solution022.cpp" />
+    <ClCompile Include="Solution023.cpp" />
+    <ClCompile Include="Solution024.cpp" />
+    <ClCompile Include="Solution028.cpp" />
+    <ClCompile Include="Solution030.cpp" />
+    <ClCompile Include="Solution034.cpp" />
+    <ClCompile Include="Solution035.cpp" />
+    <ClCompile Include="Solution036.cpp" />
+    <ClCompile Include="Solution039.cpp" />
+    <ClCompile Include="Solution049.cpp" />
+    <ClCompile Include="Solution050.cpp" />
+    <ClCompile Include="Solution152.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
