@@ -7,6 +7,17 @@ Problems completed:
 - 3: Find the largest prime factor of 600851475143.
 - 4: Largest palindrome from the product of two 3-digit numbers.
 
+Problems inefficiently completed:
+- 22: Total score of ordered names from a file.
+- 23: Sum of positive integers which cannot be written as the sum of two abundant numbers.
+- 28: Sum of diagonals in a 1001x1001 spiral matrix.
+- 30: Sum of all numbers that can be written as the sum of their digits as fifth powers.
+- 34: Sum of numbers which are equal to the sum of their digits as factorials.
+- 35: Number of circular primes below one million.
+- 36: Base 10 and 2 palindromes below one million.
+- 49: Finding the arithmetic sequence with three four-digit prime and permutated numbers.
+- 50: Prime with most consecutive primes under one-million.
+
 
 This project has no license and may be used for any purpose at all; for more information about Project Euler, visit:
 http://www.projecteuler.net
