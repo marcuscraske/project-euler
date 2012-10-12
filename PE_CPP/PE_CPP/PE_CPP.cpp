@@ -95,6 +95,8 @@ SBase* getSolution(int problemNum)
 			return new Solution022();
 		case 23:
 			return new Solution023();
+		case 25:
+			return new Solution025();
 		case 28:
 			return new Solution028();
 		case 30:

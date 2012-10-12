@@ -6,6 +6,7 @@
 
 #include "Solution022.h"
 #include "Solution023.h"
+#include "Solution025.h"
 #include "Solution028.h"
 #include "Solution030.h"
 #include "Solution034.h"

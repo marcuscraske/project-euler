@@ -108,6 +108,12 @@
     <ClInclude Include="Solution039.h">
       <Filter>Header Files\Solutions\Incomplete</Filter>
     </ClInclude>
+    <ClInclude Include="Solution018.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution025.h">
+      <Filter>Header Files\Solutions\Completed - Clean</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PE_CPP.cpp">
@@ -169,6 +175,12 @@
     </ClCompile>
     <ClCompile Include="Solution039.cpp">
       <Filter>Source Files\Solutions\Incomplete</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution018.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution025.cpp">
+      <Filter>Source Files\Solutions\Completed - Clean</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

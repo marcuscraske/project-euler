@@ -78,9 +78,11 @@
     <ClInclude Include="Solution002.h" />
     <ClInclude Include="Solution003.h" />
     <ClInclude Include="Solution004.h" />
+    <ClInclude Include="Solution018.h" />
     <ClInclude Include="Solution022.h" />
     <ClInclude Include="Solution023.h" />
     <ClInclude Include="Solution024.h" />
+    <ClInclude Include="Solution025.h" />
     <ClInclude Include="Solution028.h" />
     <ClInclude Include="Solution030.h" />
     <ClInclude Include="Solution034.h" />
@@ -102,9 +104,11 @@
     <ClCompile Include="Solution002.cpp" />
     <ClCompile Include="Solution003.cpp" />
     <ClCompile Include="Solution004.cpp" />
+    <ClCompile Include="Solution018.cpp" />
     <ClCompile Include="Solution022.cpp" />
     <ClCompile Include="Solution023.cpp" />
     <ClCompile Include="Solution024.cpp" />
+    <ClCompile Include="Solution025.cpp" />
     <ClCompile Include="Solution028.cpp" />
     <ClCompile Include="Solution030.cpp" />
     <ClCompile Include="Solution034.cpp" />
