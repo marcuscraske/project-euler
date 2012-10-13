@@ -1,11 +1,13 @@
 This is not an official UberMeat project.
 
-
+Solutions
+**************************************************************************************
 Problems completed:
-- 1: Sum of natural numbers divisible by 3 and 5.
-- 2: Sum of even Fibonacci terms between one to four-million.
-- 3: Find the largest prime factor of 600851475143.
-- 4: Largest palindrome from the product of two 3-digit numbers.
+- 01: Sum of natural numbers divisible by 3 and 5.
+- 02: Sum of even Fibonacci terms between one to four-million.
+- 03: Find the largest prime factor of 600851475143.
+- 04: Largest palindrome from the product of two 3-digit numbers.
+- 25: First term with 1000 digits in the Fibonacci sequence.
 
 Problems inefficiently completed:
 - 22: Total score of ordered names from a file.
@@ -18,11 +20,21 @@ Problems inefficiently completed:
 - 49: Finding the arithmetic sequence with three four-digit prime and permutated numbers.
 - 50: Prime with most consecutive primes under one-million.
 
+Missing Utils
+**************************************************************************************
+Utils.h and Utils.cpp have been removed in-order for their code to be recycled at
+University; the reason of their removal is at the risk of self-plagiarism. You can
+contact me at limpygnome@gmail.com if you need help replicating any referenced
+functions.
 
+License
+**************************************************************************************
 This project has no license and may be used for any purpose at all; for more information about Project Euler, visit:
 http://www.projecteuler.net
 
 If you require a license, use WTFPL (Do What The Fuck You Want To Public License).
 
+Project Euler - Friend Key
+**************************************************************************************
 You can also add me as a friend to view my progress:
 74797849278763_6471c62a592921cb78bbc7baad665782
