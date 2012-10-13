@@ -1,3 +1,4 @@
+#pragma once
 #include "SolutionIncludes.h"
 
 class Solution025 : public SBase

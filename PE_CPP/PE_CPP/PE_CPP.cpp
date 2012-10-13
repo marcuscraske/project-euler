@@ -62,10 +62,14 @@ void getListOfSolutions()
 {
 	SBase* solution = 0;
 	int i = 1;
-	while((solution = getSolution(i)) != 0 && (i++) < INT_MAX)
+	while(i++ <= EULER_PROBLEMS)
 	{
-		cout << "Problem #" << solution->problemNumber() << "\n" << solution->title() << "\n\n";
-		delete solution;
+		solution = getSolution(i);
+		if(solution != 0)
+		{
+			cout << "Problem #" << solution->problemNumber() << "\n" << solution->title() << "\n\n";
+			delete solution;
+		}
 	}
 }
 void handleSolutionExecution(SBase* solution)
@@ -91,6 +95,8 @@ SBase* getSolution(int problemNum)
 			return new Solution003();
 		case 4:
 			return new Solution004();
+		case 18:
+			return new Solution018();
 		case 22:
 			return new Solution022();
 		case 23:

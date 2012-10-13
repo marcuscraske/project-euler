@@ -1,3 +1,4 @@
+#pragma once
 #include "Solution025.h"
 
 int Solution025::problemNumber()
